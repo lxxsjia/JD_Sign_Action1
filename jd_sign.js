@@ -108,9 +108,10 @@ function main() {
   console.log("开始执行。。。")
   // 2、替换cookie
   setupCookie()
+  // 3、执行脚本
   exec(`node '${js_path}' >> '${result_path}'`);
    // 4、发送推送
-   sendNotificationIfNeed() 
+//    sendNotificationIfNeed() 
 
   // 1、下载脚本
  // download(js_url, './').then(res=>{
