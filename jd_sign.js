@@ -106,7 +106,11 @@ function main() {
     console.log('请配置京东cookie!'); return;
   }
   console.log("开始执行。。。")
+  // 2、替换cookie
+  setupCookie()
   exec(`node '${js_path}' >> '${result_path}'`);
+   // 4、发送推送
+   sendNotificationIfNeed() 
 
   // 1、下载脚本
  // download(js_url, './').then(res=>{
