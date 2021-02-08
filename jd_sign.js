@@ -105,8 +105,7 @@ function main() {
   if (!cookie) {
     console.log('请配置京东cookie!'); return;
   }
-  fs.writeFileSync(result_path, '开始执行任务。。。', 'utf8')
-  console.log('请配置京东cookie!'); return;
+  console.log("开始执行。。。")
   exec(`node '${js_path}' >> '${result_path}'`).catch((err)=>{
     console.log("执行脚本失败，任务中断！")
     fs.writeFileSync(error_path, err, 'utf8')
