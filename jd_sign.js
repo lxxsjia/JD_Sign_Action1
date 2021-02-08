@@ -109,7 +109,7 @@ function main() {
   exec(`node '${js_path}' >> '${result_path}'`).catch((err)=>{
     console.log("执行脚本失败，任务中断！")
     fs.writeFileSync(error_path, err, 'utf8')
-  });
+  })
 
   // 1、下载脚本
  // download(js_url, './').then(res=>{
